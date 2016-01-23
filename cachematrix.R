@@ -34,9 +34,9 @@ makeCacheMatrix <- function(x = matrix()) {
 ## It checks if the inverse had been reated, If so, it gets the result from cache.
 ## If not, it computes the inverse and sets the value in cache using the setmatrix function.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x=matrix(), ...) {
         ## Return a matrix that is the inverse of 'x'
-  m <- x$getmarix()
+  m <- x$getmatrix()
   if(!is.null(m)) {
     message("getting cached data")
     return(m)
